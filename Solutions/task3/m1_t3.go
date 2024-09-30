@@ -22,36 +22,38 @@ import (
 
 func main() {
 	var (
-		deposit float64
-		years   int64
-		percent int64
-		result  float64
+		deposit      float64
+		years        int64
+		percent      int64
+		result       float64
+		deposit_hint string = "Укажите размер вклада в диапазоне от 100 до 1_000_000"
+		years_hint   string = "Укажите кол-во лет в диапазоне от 1 до 100"
+		percent_hint string = "Укажите процент по вкладу в диапазоне от 1 до 20"
+		error_hint   string = "Неправильные данные:"
 	)
 
-	fmt.Println("Укажите размер вклада в диапазоне от 100 до 1_000_000")
+	fmt.Println(deposit_hint)
 	fmt.Scan(&deposit)
-	fmt.Println("Укажите кол-во лет в диапазоне от 1 до 100")
-	fmt.Scan(&years)
-	fmt.Println("Укажите процент по вкладу в диапазоне от 1 до 20")
-	fmt.Scan(&percent)
-
 	if deposit < 100 || deposit > 1000000 {
-		fmt.Println("Неправлиьные данные: вклад от 100 до 1_000_000")
+		fmt.Println(error_hint, deposit_hint)
 		return
 	}
 
+	fmt.Println(years_hint)
+	fmt.Scan(&years)
 	if years < 1 || years > 100 {
-		fmt.Println("Неправлиьные данные: кол-во лет от 1 до 100")
+		fmt.Println(error_hint, years_hint)
 		return
 	}
 
+	fmt.Println(percent_hint)
+	fmt.Scan(&percent)
 	if percent < 1 || percent > 20 {
-		fmt.Println("Неправлиьные данные: кол-во лет от 1 до 100")
+		fmt.Println(error_hint, percent_hint)
 		return
 	}
 
-
-	result = deposit * (math.Pow(float64((1 + percent/100)), float64(years)))
+	result = deposit * (math.Pow((1 + float64(percent)/100), float64(years)))
 
 	fmt.Println("Размер вклада: ", result)
 }
