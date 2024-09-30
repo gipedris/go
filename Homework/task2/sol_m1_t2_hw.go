@@ -13,7 +13,7 @@ import (
 
 func main() {
 
-	var input int
+	var input int16
 	fmt.Println("Введите трехзначное число: ")
 	fmt.Scan(&input)
 	first := input / 100 % 10

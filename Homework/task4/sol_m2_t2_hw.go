@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	var input int
+	var input int16
 	fmt.Println("Введите четырезначное число: ")
 	fmt.Scan(&input)
 

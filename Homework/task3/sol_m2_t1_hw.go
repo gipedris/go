@@ -16,7 +16,7 @@ import (
 func main() {
 
 	var (
-		a, b, c, x int
+		a, b, c, x int16
 	)
 
 	fmt.Println("Введите первое число: ")

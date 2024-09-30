@@ -20,9 +20,9 @@ func main() {
 	const gas_price int16 = 48
 
 	var (
-		distance        float64
-		consumption     float64
-		result          float64
+		distance        float32
+		consumption     float32
+		result          float32
 		distanceHint    string = "Укажите расстояние в диапазоне от 50 до 10000 км"
 		consumptionHint string = "Укажите расход в литрах в диапазоне от 5 до 25 литров на 100 км"
 		error           string = "Неправильные данные:"
@@ -42,6 +42,6 @@ func main() {
 		return
 	}
 
-	result = (distance / 100) * consumption * float64(gas_price)
+	result = (distance / 100) * consumption * float32(gas_price)
 	fmt.Printf("Cтоимость поездки: %.2f ₽\n", result)
 }
