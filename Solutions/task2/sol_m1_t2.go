@@ -10,8 +10,9 @@ import (
 
 func main() {
 
-	var input int = 345
-
+	var input int
+	fmt.Println("Введите число: ")
+	fmt.Scan(&input)
 	// сколько целых сотен
 	first := input / 100
 	fmt.Println("Первая цифра", first)
