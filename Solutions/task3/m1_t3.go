@@ -54,6 +54,5 @@ func main() {
 	}
 
 	result = deposit * (math.Pow((1 + float64(percent)/100), float64(years)))
-
-	fmt.Println("Размер вклада: ", result)
+	fmt.Printf("Размер вклада с капитализацией: %.2f\n", result)
 }
