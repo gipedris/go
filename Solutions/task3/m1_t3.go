@@ -22,34 +22,34 @@ import (
 
 func main() {
 	var (
-		deposit      float64
-		years        int64
-		percent      int64
-		result       float64
-		deposit_hint string = "Укажите размер вклада в диапазоне от 100 до 1_000_000"
-		years_hint   string = "Укажите кол-во лет в диапазоне от 1 до 100"
-		percent_hint string = "Укажите процент по вкладу в диапазоне от 1 до 20"
-		error_hint   string = "Неправильные данные:"
+		deposit     float64
+		years       int64
+		percent     int64
+		result      float64
+		depositHint string = "Укажите размер вклада в диапазоне от 100 до 1_000_000"
+		yearsHint   string = "Укажите кол-во лет в диапазоне от 1 до 100"
+		percentHint string = "Укажите процент по вкладу в диапазоне от 1 до 20"
+		error       string = "Неправильные данные:"
 	)
 
-	fmt.Println(deposit_hint)
+	fmt.Println(depositHint)
 	fmt.Scan(&deposit)
 	if deposit < 100 || deposit > 1000000 {
-		fmt.Println(error_hint, deposit_hint)
+		fmt.Println(error, depositHint)
 		return
 	}
 
-	fmt.Println(years_hint)
+	fmt.Println(yearsHint)
 	fmt.Scan(&years)
 	if years < 1 || years > 100 {
-		fmt.Println(error_hint, years_hint)
+		fmt.Println(error, yearsHint)
 		return
 	}
 
-	fmt.Println(percent_hint)
+	fmt.Println(percentHint)
 	fmt.Scan(&percent)
 	if percent < 1 || percent > 20 {
-		fmt.Println(error_hint, percent_hint)
+		fmt.Println(error, percentHint)
 		return
 	}
 
