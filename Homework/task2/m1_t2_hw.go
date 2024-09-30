@@ -16,8 +16,8 @@ func main() {
 	var input int
 	fmt.Println("Введите трехзначное число: ")
 	fmt.Scan(&input)
-	first := input / 100
-	second := input % 100 / 10
+	first := input / 100 % 10
+	second := input / 10 % 10
 	third := input % 10
 	fmt.Printf("%v%v%v\n", third, second, first)
 }
