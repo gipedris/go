@@ -19,7 +19,7 @@ func main() {
 	fmt.Printf("type of result %T and value of result %v\n", result, result)
 	fmt.Printf("type of check %T and value of check %v\n", check, check)
 
-	fmt.Println("Increment: " )
+	fmt.Println("Increment: ")
 	// check = check + 1
 	check++
 	fmt.Println("check = ", check)
@@ -32,10 +32,8 @@ func main() {
 	newCheck := int(check) % 3
 	fmt.Println("newCheck:", newCheck)
 
-
 	// Операция возведение в степень из модуля math
-
 	total := math.Pow(2, 10)
-	fmt.Printf("Total = %.3f\n", total)
+	fmt.Printf("Total = %.1f\n", total)
 
 }
