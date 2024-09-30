@@ -11,7 +11,7 @@ import (
 func main() {
 
 	var input int
-	fmt.Println("Введите число: ")
+	fmt.Println("Введите трехзначное число: ")
 	fmt.Scan(&input)
 	// сколько целых сотен
 	first := input / 100
