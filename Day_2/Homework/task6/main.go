@@ -15,9 +15,8 @@ func main() {
 	fmt.Scan(&number)
 
 	for idx := range number {
-		sum += int(number[idx]-'0')
+		sum += int(number[idx] - '0') // ASCII  48, val 0
 	}
 
 	fmt.Println("Сумма цифр:", sum)
-
 }
