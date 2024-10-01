@@ -16,7 +16,7 @@ import (
 func main() {
 
 	var (
-		a, b, c, x int16
+		a, b, c int16
 	)
 
 	fmt.Println("Введите первое число: ")
@@ -28,21 +28,15 @@ func main() {
 	fmt.Printf("Ввод: %v %v %v\n", a, b, c)
 
 	if b > c {
-		x = b
-		b = c
-		c = x
+		b, c = c, b
 	}
 
 	if a > c {
-		x = a
-		a = c
-		c = x
+		a, c = c, b
 	}
 
 	if a > b {
-		x = a
-		a = b
-		b = x
+		a, b = b, a
 	}
 
 	fmt.Printf("Вывод: %v %v %v\n", a, b, c)
