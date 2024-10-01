@@ -63,7 +63,7 @@ func main() {
 
 
 	//9. Игнорирование idx при range
-	fmt.Println("Итерирование через range")
+	fmt.Println("Игнорирование idx при range")
 
 	var summa float64
 	for _, value := range floatArray{
