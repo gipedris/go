@@ -23,7 +23,7 @@ func main() {
 	fmt.Println("Введите строку без знаков препинания (5 слов):")
 	for i := 0; i < 5; i++ {
 		fmt.Scan(&sentence[i])
-		if len(sentence[i]) >= len(max) {
+		if utf8.RuneCountInString(sentence[i]) >= utf8.RuneCountInString(max) {
 			max = sentence[i]
 		}
 	}
