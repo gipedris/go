@@ -9,9 +9,7 @@
 
 	Задача №1.1
 	Реализовать и функцию зашифровки
-
 	codeToString(code) -> "???????' 
-
 	stringToCode("hello") -> "??????"
 */
 package main
